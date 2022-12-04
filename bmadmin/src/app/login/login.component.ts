@@ -7,10 +7,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  protected login: string;
-  protected pwd: string;
-  protected error: string;
-  protected success: string;
+  public login: string;
+  public pwd: string;
+  public error: string;
+  public success: string;
 
   constructor(protected router: Router) {
     this.login = '';
