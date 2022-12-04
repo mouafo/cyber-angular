@@ -1,0 +1,90 @@
+body {
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+main {
+    width: 50%;
+    margin: 10% 20%;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.title-name {
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+.title,
+.title-name {
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.col-4 {
+    width: 33%;
+}
+
+.label {
+    text-align: right;
+    padding-right: 10px;
+    font-size: 18px;
+}
+
+input[type="password"],
+input[type="text"] {
+    height: 30px;
+    width: 100%;
+}
+
+.mandatory {
+    margin-left: 20px;
+}
+
+.mandatory, .error {
+    color: red;
+}
+
+.success {
+    color: green;
+
+}
+
+.button,
+.error,
+.success {
+    text-align: center;
+}
+
+input[type="button"] {
+    width: 200px;
+    height: 45px;
+    border-radius: 35px;
+    background-color: skyblue;
+    cursor: pointer;
+    border: none;
+}
+
+.success,
+.error {
+    width: 100%;
+    font-weight: bold;
+    padding: 20px 0;
+}
+
+.hide {
+    display: none;
+}
