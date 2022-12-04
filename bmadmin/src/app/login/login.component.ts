@@ -1,20 +1,36 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  protected login:string;
-  protected pwd:string;
+  protected login: string;
+  protected pwd: string;
+  protected error: string;
+  protected success: string;
 
-  constructor(){
-    this.login = "";
-    this.pwd = "";
+  constructor(protected router: Router) {
+    this.login = '';
+    this.pwd = '';
+    this.error = '';
+    this.success = '';
   }
 
-  authenticate(){
+  authenticate() {
+    this.error = '';
+    if (this.login == '' || this.pwd == '') {
+      this.error = "L'indentifiant et le mot de passe de doivent pas etre vide";
+      return;
+    }
 
+    if (this.login == 'hanae' && this.pwd == 'test') {
+      this.success = 'Authentification réussi';
+      this.router.navigate(['/bastionlist']);
+    } else {
+      this.error = 'Indentifiant ou mot de passe invalide !!';
+    }
   }
 }
