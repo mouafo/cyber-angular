@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './core/auth/auth.guard';
+import { AuthService } from './core/auth/auth.service';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'bastionlist',
+    pathMatch: 'full',
+  },
   {
     path: 'login',
     loadChildren: () =>
@@ -9,6 +16,10 @@ const routes: Routes = [
   },
   {
     path: 'bastionlist',
+    /*runGuardsAndResolvers: 'always',
+    data: { role: AuthService.roles.ADMIN },
+    canActivate: [AuthGuard],
+    canLoad: [AuthGuard],*/
     loadChildren: () =>
       import('./bastionlist/bastionlist.module').then(
         (m) => m.BastionlistModule

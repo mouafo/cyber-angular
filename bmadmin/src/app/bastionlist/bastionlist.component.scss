@@ -1,3 +1,50 @@
-p {
+
+ngx-datatable {
+    border: 1px #56215C solid;
+}
+
+datatable-header {
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+    background: #AF1278;
     color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+  datatable-body-cell {
+    padding: 10px 15px;
+    border: 1px #56215c37 solid;
+  }
+
+  ul.pager li {
+    margin: 0 1px !important;
+  }
+
+
+  datatable-footer {
+    padding: 0px 15px;
+    background: #AF1278;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+
+.dark-modal .modal-content {
+    background-color: #292b2c;
+    color: white;
+}
+.dark-modal .close {
+    color: white;
+}
+.light-blue-backdrop {
+    background-color: #5cb3fd;
+}
+
+.ptb-5 {
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

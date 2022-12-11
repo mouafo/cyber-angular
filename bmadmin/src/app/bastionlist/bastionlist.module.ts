@@ -3,15 +3,16 @@ import { CommonModule } from '@angular/common';
 
 import { BastionlistRoutingModule } from './bastionlist-routing.module';
 import { BastionlistComponent } from './bastionlist.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 
 @NgModule({
-  declarations: [
-    BastionlistComponent
-  ],
+  declarations: [BastionlistComponent],
   imports: [
     CommonModule,
-    BastionlistRoutingModule
-  ]
+    BastionlistRoutingModule,
+    NgxDatatableModule,
+    NgbModule,
+  ],
 })
-export class BastionlistModule { }
+export class BastionlistModule {}
